@@ -44,5 +44,14 @@
 
  }
  .fa-bars{
-    cl
+    color: #fff;
+ }
+
+ .nav-Links-mobile{
+   display: none;
+ }
+ 
+ .menu-icon{
+   display: none;
+
  }
