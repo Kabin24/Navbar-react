@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import './Button.css'
 
 const STYLES = [
@@ -6,25 +6,26 @@ const STYLES = [
     'btn--outline'
 ]
 
-const SIZES =[
+const SIZES = [
     'btn--medium',
-    'btn--large',
+    'btn--large'
 ]
-export const Button =({
+
+export const Button = ({
     children,
     type,
-    onclick,
+    onClick,
     buttonStyle,
     buttonSize
 }) => {
 
-    const checkButtonStyle = STYLES.includes(buttonStyle)?buttonStyle:STYLES[0]
+    const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0]
 
-    const checkButtonSize = STYLES.includes(buttonSize)?buttonSize:STYLES[0]
+    const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
 
-
-    return(
-        <button className={'btn ${checkButtonStyle}${checkButtonSize}'} onclick={onclick} type={type}>{children}
+    return (
+        <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>
+            {children}
         </button>
     )
 }
